@@ -1,10 +1,13 @@
-<html lang="en-us">
 
+<!DOCTYPE html>
 
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Homework 4 (Quiz)</title>
-
-<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Homework 4 (Quiz)</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -17,90 +20,95 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-
-
 </head>
-
 <body>
-    
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.html">Sadiq's Fourth Homework!</a>
-    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Sadiq's Fourth Homework!</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
 
 
-        </ul>
+
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class="jumbotron" id="jumbotron">
+        <h1 class="display-4">The One Minute Game Of Thrones Quiz</h1>
+        <p class="lead">Do you know enough of Westeros to pass this quiz?</p>
+
 
     </div>
-</nav>
 
-<div class="jumbotron" id="jumbotron">
-    <h1 class="display-4">The One Minute Game Of Thrones Quiz</h1>
-    <p class="lead">Do you know enough of Westeros to pass this quiz?</p>
-    
 
-</div>
-
-<div id="start">Start Quiz</div>
-
-<div id="quiz" style="display: none;" class="container">
-
-    <div id="quiz">
-
-        <h1 style="text-align: center;">The Lore of Westeros</h1 s>
-        <h3 class="time"></h3>
-        <hr style="margin-bottom: 40px", style="margin-top: 40px">
-
-        <div id="question"><p>Question</p></div>
+    <div class="container">
+        <div class="transbox"></div>
+        <div id="quiz">
             
-            <div id="timer">
-
-                <div id="counter"> 6 </div>
+            <h3 class="time"></h3>
+            <hr style="margin-bottom: 20px">
+ 
+            <p id="question"></p>
+ 
+            <div class="buttons">
+                <button id="btn0"><span id="choice0"></span></button>
+                <button id="btn1"><span id="choice1"></span></button>
+                <button id="btn2"><span id="choice2"></span></button>
+                <button id="btn3"><span id="choice3"></span></button>
+            </div>
+        </div>
+    <!-- ///core container (hidden) -->
+            <div id="scoresheet" class="hide">
+              <form>
                 
-                <div id="backgroundTime"></div>
-
-                <div id="timeGauge"></div>
-
-
+                <input placeholder="initials" id="name" />
+                <button id="add-btn">Add Score</button>
+              </form>
+              <div id="modal-container" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                      <span class="close">&times;</span>
+                      <h2 id="modal-name">
+                      </h2>
+                    </div>
+                    <div class="modal-body">
+                      <h3>
+                        Description:
+                      </h3>
+                      <textarea id="description" cols="30" rows="10"></textarea>
+                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <hr style="margin-top: 50px">
+            <div id="foot">
+            <footer>
+                <p id="progress">Question x of y</p><p class="time"></p>
+            </footer>
             </div>
+        </div>
+        </div>
+    </div>
+ 
+ 
+<script src="script.js"></script>
+ 
+</body>
+</html>
 
-            <div id="choices">
-
-                <div class="choice" id="A" onclick="checkAnswer('A')">A</div>
-                <div class="choice" id="B" onclick="checkAnswer('A')">B</div>
-                <div class="choice" id="C" onclick="checkAnswer('A')">C</div>
-                  
-            </div>
-            <div class="prog " id="progress"></div cl>
-
-        <div class="buttons">
+            <!-- <div class="buttons">
                 <button type="button" class="btn btn-secondary" id="choice1">Secondary</button>
                 <button type="button" class="btn btn-secondary" id="choice2">Secondary</button>
                 <button type="button" class="btn btn-secondary" id="choice3">Secondary</button>
                 <button type="button" class="btn btn-secondary" id="choice4">Secondary</button>
-        </div>
-    </div>
-
-    
-
-
-
-</div>
-<div id="scoreContainer" style="display: none;"><p>50%</p></div>
-
-<script src="script.js"></script>
-
-</body>
-
-
-
+        </div> -->

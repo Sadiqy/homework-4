@@ -1,15 +1,127 @@
+
 body {
-   
+    
     background-image: url(https://images5.alphacoders.com/637/thumb-1920-637668.jpg);
 }
-
-.btn-secondary {
-
-    width: 500px;
-    height: 100px;
+ 
+.container {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    
+    padding: 10px 50px 50px 50px;
+    
+    
+}
+ 
+.container h1 {
+    font-family: "sans-serif";
+    font-weight: bold;
+    font: outline;
+    
+    font-size: 60px;
+    text-align: center;
+    
+    padding: 2px 0px;
+    
+}
+ 
+#score {
+    color: #01BBFF;
+    text-align: center;
+    font-size: 30px;
+}
+ 
+.container #question {
+    font-family: "monospace";
+    font-size: 30px;
+    color: #01BBFF;
+    text-align: center;
+}
+ 
+.buttons {
+    margin-top: 30px;
+    margin-left: 75px;
+}
+ 
+#btn0, #btn1, #btn2, #btn3 {
+    background-color: rgb(207, 211, 212);
+    width: 300px;
     font-size: 25px;
     color: #fff;
     border: 1px solid #1D3C6A;
     margin: 10px 10px 10px 0px;
     padding: 10px 10px;
 }
+ 
+#btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
+    cursor: pointer;
+    background-color:grey;
+}
+ 
+#btn0:focus, #btn1:focus, #btn2:focus, #btn3:focus {
+    outline: 1;
+}
+
+#people-list {
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+#progress {
+    color: rgb(63, 28, 28);
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+.time {
+    color: yellow;
+    font-family: monospace;
+    font-size: 25px;
+    text-align: center;
+}
+.hide {
+    display: none;
+    font-display: block;
+  }
+
+span {
+    cursor: pointer;
+  }
+  
+  .modal {
+    display: none;
+    margin-left: 100px;  
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: #586994;
+    color: white;
+  }
+
+  .modal-body {
+      padding: 2px 16px;
+      margin-left: 15px;
+    }
+  
+  .modal-content {
+    position: absolute;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  
+  #scoresheet {
+      margin-left: 50px;
+      margin-right: 50px;
+  }
+
+  input {
+      padding-left: 10%;
+  }
